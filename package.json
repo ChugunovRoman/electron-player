@@ -1,0 +1,38 @@
+{
+  "name": "LimBo",
+  "version": "0.1.0",
+  "description": "LimBo a simple music player based on Electron.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "electron index.js",
+    "watch": "watchify src/main.js -t babelify -o public/js/bundle.js --debug --verbose"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ],
+    "minified": true
+  },
+  "keywords": [],
+  "author": "Chugunov Roman",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
+    "babelify": "*",
+    "classnames": "*",
+    "electron": "*",
+    "electron-reload": "*",
+    "lodash": "^4.17.4",
+    "react": "*",
+    "react-autocomplete": "*",
+    "react-dom": "*",
+    "react-native-fs": "^2.3.3",
+    "react-redux": "^5.0.5",
+    "react-sound": "*",
+    "redux": "^3.7.2",
+    "soundmanager2": "*"
+  }
+}
