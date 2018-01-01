@@ -1,1 +1,7 @@
 node_modules
+*.lock
+*.log
+yarn*
+build
+assets
+*.old
