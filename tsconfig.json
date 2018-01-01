@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "outDir": "./assets/js",
+        "noImplicitAny": true,
+        "target": "es6",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "typeRoots": ["node_modules/@types"],
+        "allowJs": true,
+        "jsx": "react"
+    },
+    "include": [
+        "./src/render/index.tsx"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
