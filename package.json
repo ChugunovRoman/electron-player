@@ -4,37 +4,59 @@
   "description": "LimBo a simple music player based on Electron.js",
   "main": "index.js",
   "scripts": {
-    "test": "electron index.js",
-    "watch": "watchify src/main.js -t babelify -o public/js/bundle.js --debug --verbose"
+    "start": "electron ./src/main/index.js",
+    "build": "webpack --config ./config/webpack.config.js",
+    "build:dev": "webpack --config ./config/webpack.config.front.dev.js",
+    "build:watch": "webpack --config ./config/webpack.config.front.dev.js --watch",
+    "build:prod": "webpack --config ./config/webpack.config.front.prod.js",
+    "build:front": "webpack --config ./config/webpack.config.front.js",
+    "build:devfront": "webpack --config ./config/webpack.config.front.js",
+    "build:front:watch": "webpack --config ./config/webpack.config.front.js --watch"
   },
-  "babel": {
-    "presets": [
-      "es2015",
-      "react"
-    ],
-    "minified": true
-  },
-  "keywords": [],
+  "keywords": [
+    "React",
+    "Electron",
+    "Audio",
+    "Player",
+    "mp3"
+  ],
   "author": "Chugunov Roman",
   "license": "MIT",
   "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/electron": "^1.6.10",
+    "@types/lodash": "^4.14.91",
+    "@types/react": "^16.0.31",
+    "@types/react-dom": "^16.0.3",
+    "@types/react-redux": "^5.0.14",
+    "@types/redux": "^3.6.0",
+    "awesome-typescript-loader": "^3.4.1",
     "babel-preset-es2015": "*",
     "babel-preset-react": "*",
-    "babelify": "*"
+    "fork-ts-checker-webpack-plugin": "^0.2.9",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "node-sass": "^4.7.2",
+    "source-map-loader": "^0.2.3",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0"
   },
   "dependencies": {
-    "axios": "*",
+    "axios": "^0.17.1",
     "classnames": "*",
-    "electron": "*",
-    "electron-reload": "*",
+    "dotenv": "^4.0.0",
+    "electron": "^1.7.10",
+    "electron-reload": "^1.2.2",
     "lodash": "^4.17.4",
-    "react": "*",
+    "musicmetadata": "^2.0.5",
+    "react": "^16.2.0",
     "react-autocomplete": "*",
-    "react-dom": "*",
+    "react-dom": "^16.2.0",
     "react-native-fs": "^2.3.3",
-    "react-redux": "^5.0.5",
-    "react-sound": "*",
+    "react-redux": "^5.0.6",
+    "react-sound": "^1.0.0",
     "redux": "^3.7.2",
-    "soundmanager2": "*"
+    "soundmanager2": "^2.97.20170602"
   }
 }
